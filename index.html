@@ -5,7 +5,7 @@
 
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
   >
 
   <meta
@@ -42,7 +42,13 @@
 
   <title>Byte Vermin | Series 1 Collectible Toys</title>
 
-  <link rel="icon" href="images/byte-vermin-logo.png">
+  <link rel="icon" href="images/byte-vermin-favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Black+Ops+One&amp;family=Rajdhani:wght@300;400;500&amp;display=swap"
+    rel="stylesheet"
+  >
   <link rel="stylesheet" href="styles.css">
 </head>
   <body>
@@ -78,10 +84,15 @@
     <main id="main">
       <section class="hero-section" id="home" aria-labelledby="hero-title">
         <div class="hero-media">
-          <img
-            src="images/byte-vermin-banner.png"
-            alt="Byte Vermin Series 1 banner showing packaged collectible toys on a red glitch background"
-          >
+          <video
+            src="images/byte-vermin-banner-loop.webm"
+            poster="images/byte-vermin-banner.png"
+            aria-label="Byte Vermin Series 1 collectible creatures breaking containment"
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
         </div>
 
         <div class="hero-copy">
@@ -130,6 +141,25 @@
       <div class="glitch-divider" aria-hidden="true">
         <img src="images/glitch-divider-black.png" alt="" loading="lazy" decoding="async">
       </div>
+
+      <section class="logo-scroll" aria-labelledby="logo-scroll-title" data-logo-scroll>
+        <h2 class="sr-only" id="logo-scroll-title">Byte Vermin contamination sequence</h2>
+        <div class="logo-scroll-stage">
+          <img
+            class="logo-scroll-fallback"
+            src="images/frames/bvscroll-frame-0050.webp"
+            alt="The Byte Vermin logo transforming into luminous green slime"
+            loading="lazy"
+            decoding="async"
+            data-logo-scroll-fallback
+          >
+          <canvas class="logo-scroll-canvas" aria-hidden="true" data-logo-scroll-canvas></canvas>
+          <p class="logo-scroll-status" aria-hidden="true">
+            <span>Contamination level</span>
+            <span data-logo-scroll-progress>001%</span>
+          </p>
+        </div>
+      </section>
 
       <section class="section-block series-section" id="series" aria-labelledby="series-title">
         <div class="section-inner">
@@ -489,6 +519,21 @@
         </div>
       </section>
 
+      <figure class="online-play section-inner">
+        <div class="online-play-frame">
+          <img
+            src="images/byte-vermin-online-play.png"
+            alt="A collector connecting a Byte Vermin containment capsule to the online collector portal"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+        <figcaption>
+          <span>Remote link established</span>
+          Connect the containment unit. Log the specimen. Watch the infestation spread online.
+        </figcaption>
+      </figure>
+
       <section class="section-block collect-section" aria-labelledby="collect-title">
         <div class="section-inner collect-panel">
           <p class="eyebrow">Warning: shelf breach</p>
@@ -497,6 +542,10 @@
           <a class="button button-primary" href="#series">Collect &rsquo;Em All</a>
         </div>
       </section>
+
+      <div class="glitch-divider glitch-divider-footer" aria-hidden="true">
+        <img src="images/glitch-divider-black.png" alt="" loading="lazy" decoding="async">
+      </div>
     </main>
 
     <footer class="site-footer" id="contact">
